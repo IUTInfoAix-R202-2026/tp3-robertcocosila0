@@ -41,7 +41,6 @@ class FormulaireConnexionControllerTest {
 
   // --- Étape 1 : présence des contrôles ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(1)
   void les_champs_identifiant_et_mot_de_passe_sont_presents(FxRobot robot) {
@@ -55,7 +54,6 @@ class FormulaireConnexionControllerTest {
         .isNotNull();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(2)
   void les_boutons_ok_et_annuler_sont_presents(FxRobot robot) {
@@ -71,7 +69,6 @@ class FormulaireConnexionControllerTest {
 
   // --- Étape 2 : état initial ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(3)
   void le_mot_de_passe_est_non_editable_au_demarrage(FxRobot robot) {
@@ -83,7 +80,6 @@ class FormulaireConnexionControllerTest {
         .isFalse();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(4)
   void le_bouton_ok_est_desactive_au_demarrage(FxRobot robot) {
@@ -93,7 +89,6 @@ class FormulaireConnexionControllerTest {
         .isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(5)
   void le_bouton_annuler_est_desactive_si_les_deux_champs_sont_vides(FxRobot robot) {
@@ -105,7 +100,6 @@ class FormulaireConnexionControllerTest {
 
   // --- Étape 3 : binding sur l'éditabilité du mot de passe ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(6)
   void le_mot_de_passe_devient_editable_quand_l_identifiant_atteint_six_caracteres(FxRobot robot) {
@@ -137,7 +131,6 @@ class FormulaireConnexionControllerTest {
         .isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(8)
   void le_bouton_ok_reste_desactive_sans_majuscule_dans_le_mot_de_passe(FxRobot robot) {
@@ -151,7 +144,6 @@ class FormulaireConnexionControllerTest {
         .isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(9)
   void le_bouton_ok_reste_desactive_sans_chiffre_dans_le_mot_de_passe(FxRobot robot) {
@@ -167,7 +159,6 @@ class FormulaireConnexionControllerTest {
         .isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(10)
   void le_bouton_ok_s_active_quand_le_mot_de_passe_respecte_les_trois_regles(FxRobot robot) {
@@ -183,7 +174,6 @@ class FormulaireConnexionControllerTest {
 
   // --- Étape 5 : actions ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(11)
   void cliquer_sur_valider_affiche_l_identifiant_et_le_mot_de_passe_masque(FxRobot robot) {
@@ -201,7 +191,6 @@ class FormulaireConnexionControllerTest {
         .isEqualTo("alice1 ********");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   @Order(12)
   void cliquer_sur_annuler_vide_les_deux_champs_et_le_label_message(FxRobot robot) {
